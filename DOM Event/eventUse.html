@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event dynamic use</title>
+</head>
+<body>
+    <ul id = "list-container">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+        <li class="item">Item 4</li>
+        <li class="item">Item 5</li>
+    </ul>
+    <textarea name="text" id="comment-box" cols="60" rows="10"></textarea><br>
+    <button id="add-comment"> Add me</button>
+    <script>
+        const addComment = document.getElementById('add-comment');
+        const listContainer = document.getElementById('list-container');
+        const commentBox = document.getElementById('comment-box');
+
+        addComment.addEventListener('click', function(){
+            const newItem = document.createElement('li');
+            newItem.innerText = commentBox.value;
+            listContainer.appendChild(newItem);
+            commentBox.value = "";
+        })
+    </script>
+</body>
+</html>

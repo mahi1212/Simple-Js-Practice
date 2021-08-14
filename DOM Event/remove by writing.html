@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>This will be deleted if we write 'delete'</h2>
+    <p id="target-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ducimus.</p>
+    <input type="text" id="confirm-delete-input">
+    <button id="confirm-delete-btn" disabled>confirm</button>
+    
+    <script>
+        // Focus event adding
+        document.getElementById('confirm-delete-input').addEventListener('focus', function(){
+            document.getElementById('confirm-delete-input').style.backgroundColor = "red";
+            document.getElementById('confirm-delete-input').style.outline = "none";
+            document.getElementById('confirm-delete-input').style.color = "white";
+        });
+        
+        // Blur event adding
+        document.getElementById('confirm-delete-input').addEventListener('blur', function(){
+            document.getElementById('confirm-delete-input').style.backgroundColor = "white";
+        });
+
+        // Keyup event adding
+        document.getElementById('confirm-delete-input').addEventListener('keyup', function(event){
+            if(event.target.value == 'delete'){
+                document.getElementById('confirm-delete-btn').removeAttribute('disabled');
+                document.getElementById('confirm-delete-btn').style.backgroundColor = "red";
+            }
+            else{
+                document.getElementById('confirm-delete-btn').setAttribute('disabled', true);// must set--- true
+            }
+        });
+        // After clicking in delete btn
+        document.getElementById('confirm-delete-btn').addEventListener('click' , function(){
+            document.getElementById('target-para').style.display = 'none';
+        });
+
+    </script>
+</body>
+</html>

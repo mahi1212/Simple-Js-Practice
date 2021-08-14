@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove function</title>
+</head>
+<body>
+    <h1>This is a website to confirm deletion</h1>
+    <p id="para">This is my demo delete paragraph</p>
+    <button id="delete-btn">Click me to remove</button>
+    <!-- second part -->
+    <p>This will be deleted if we write 'delete'</p>
+    <p id="target-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ducimus.</p>
+    <input type="text" id="confirm-delete-input">
+    <button id="confirm-delete-btn" disabled>confirm</button>
+    <script>
+        const para = document.getElementById('para');
+        const deleteButton = document.getElementById('delete-btn');
+        
+        deleteButton.addEventListener('click', function(){
+            para.style.display = "none";
+        });
+        
+    </script>
+</body>
+</html>

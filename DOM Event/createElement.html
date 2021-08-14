@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+<body>
+    <ul class="list-container">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+        <li class="item">Item 4</li>
+        <li class="item">Item 5</li>
+    </ul>
+    <script>
+        const listContainer = document.querySelector('.list-container');
+        let newItem = document.createElement('li');
+        newItem.innerText = 'This is newly added item';
+        listContainer.appendChild(newItem);
+        console.log(newItem.parentNode);
+    </script>
+</body>
+</html>
