@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+    <style>
+        #comments-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .comment-style{
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px 20px;
+            border: 2px dotted blueviolet;
+            background-color: blanchedalmond;
+        }
+
+        .text-center{
+            text-align: center;
+        }
+
+        .my-btn{
+            color: #fff;
+            padding: 10px;
+            border: none;
+            background-color: cadetblue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="text-center">Comment show using JSON Placeholder API</h1>
+    <h2 class="text-center" id="details-container"></h2>
+    <div id="comments-container">
+
+    </div>
+    <button onclick="loadComments()" class="my-btn">Generate Comments</button>
+    <script src="comment.js"></script>
+</body>
+</html>
