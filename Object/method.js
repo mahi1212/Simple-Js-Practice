@@ -21,7 +21,7 @@ const student = {
                 console.log('Na fokir nay', this.name)
             }
         }
-    },
+    }, 
     takeExam: function(){
         console.log(this.name,'is on exam')
     }
